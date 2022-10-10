@@ -1,0 +1,16 @@
+{
+  "name": "file-encryptor",
+  "productName": "File Encryptor",
+  "version": "1.0.0",
+  "description": "A simple app to encrypt your files.",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "keywords": [],
+  "author": "Abhishek",
+  "license": "ISC",
+  "dependencies": {
+    "electron": "^21.1.0"
+  }
+}
