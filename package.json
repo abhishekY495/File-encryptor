@@ -3,7 +3,7 @@
   "productName": "File Encryptor",
   "version": "1.0.0",
   "description": "A simple app to encrypt your files.",
-  "main": "main.js",
+  "main": "./app/electron/main.js",
   "scripts": {
     "start": "electron ."
   },
