@@ -16,7 +16,7 @@ const menuTemplate = [
             {
                 label: 'Quit',
                 click: () => app.quit(),
-                accelerator: `CmdOrCtrl+Q`
+                accelerator: `CmdOrCtrl+W`
             }
         ]
     }
