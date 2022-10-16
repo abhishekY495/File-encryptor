@@ -5,12 +5,17 @@
   "description": "A simple app to encrypt your files.",
   "main": "./app/electron/main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "build-css": "tailwindcss -i ./app/tailwind.css -o ./app/src/styles.css",
+    "watch-css": "tailwindcss -i ./app/tailwind.css -o ./app/src/styles.css --watch"
   },
   "keywords": [],
   "author": "Abhishek",
   "license": "ISC",
   "dependencies": {
     "electron": "^21.1.0"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.1.8"
   }
 }
