@@ -4,13 +4,25 @@ const { menuTemplate } = require('./menuTemplate.js');
 
 // 
 const isMac = process.platform === 'darwin';
+const isDev = process.env.NODE_ENV !== 'development';
 
 function createMainWindow() {
     const mainWindow = new BrowserWindow({
         title: "File encryptor",
         width: 1000,
-        height: 600
+        height: 600,
+        webPreferences: {
+            contextIsolation: true,
+            nodeIntegration: true,
+            preload: path.join(__dirname, 'preload.js')
+        }
     });
+
+    // Open DevTools
+    if (isDev) {
+        mainWindow.webContents.openDevTools();
+    }
+
     mainWindow.loadFile(path.join(__dirname, '../src/index.html'));
 }
 
