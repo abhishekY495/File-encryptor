@@ -1,16 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta http-equiv="Content-Security-Policy" content="script-src 'self'">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self'" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>File Encryptor</title>
-    <link rel="stylesheet" href="./styles.css">
-</head>
-<body>
+    <link rel="stylesheet" href="./styles.css" />
+    <script type="module" src="./js/index.js" defer></script>
+  </head>
+  <body class="text-center select-none bg-neutral-900 text-white m-2">
 
-    <h1>Hello World</h1>
-    
-</body>
+    <div
+      id="browse-container"
+      class="border-2 border-neutral-800 p-3 flex justify-center gap-4">
+      <label class="w-full bg-neutral-100 text-black p-1 px-3 rounded-md hover:bg-neutral-300">
+        📄Files
+        <input 
+          id="file-picker"
+          type="file"
+          multiple="multiple"
+          class="hidden" />
+      </label>
+      <label class="w-full bg-neutral-100 text-black p-1 px-3 rounded-md hover:bg-neutral-300">
+        📁Folders
+        <input id="folder-picker"
+        type="file"
+        webkitdirectory mozdirectory msdirectory odirectory directory multiple
+        class="hidden"/>
+      </label>
+    </div>
+
+    <div
+      id="password-container"
+      class="border-2 border-neutral-800 p-2 px-3 flex justify-around items-center content-center">
+      <input
+        type="password"
+        id="password-input"
+        placeholder="Enter Password"
+        class="text-black w-full rounded-sm rounded-tr-none rounded-br-none h-8 px-2 focus:outline-none focus:border-red-500 focus:border"
+      />
+      <label
+        id="toggle-password"
+        for="password-input"
+        class="bg-neutral-700 w-16 rounded rounded-bl-none rounded-tl-none p-1 px-2 hover:bg-neutral-600">
+        Show
+      </label>
+    </div>
+
+    <div id="files-container"><h3>Files</h3></div>
+
+    <div id="encrypt-decrypt-btns">
+      <button id="encrypt-btn">Encrypt</button>
+      <button id="decrypt-btn">Decrypt</button>
+    </div>
+
+    <hr />
+
+  </body>
 </html>
