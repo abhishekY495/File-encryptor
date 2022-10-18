@@ -9,8 +9,8 @@ const isDev = process.env.NODE_ENV !== 'development';
 function createMainWindow() {
     const mainWindow = new BrowserWindow({
         title: "File encryptor",
-        width: 1000,
-        height: 600,
+        width: 420,
+        height: 690,
         webPreferences: {
             contextIsolation: true,
             nodeIntegration: true,
