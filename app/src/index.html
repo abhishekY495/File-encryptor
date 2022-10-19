@@ -7,14 +7,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>File Encryptor</title>
     <link rel="stylesheet" href="./styles.css" />
-    <script type="module" src="./js/index.js" defer></script>
+    <script type="module" src="./js/index.js"></script>
+    <script type="module" src="./js/togglePassword.js"></script>
+    <script type="module" src="./js/browseFile.js"></script>
   </head>
   <body class="text-center select-none bg-neutral-900 text-white m-2">
 
     <div
       id="browse-container"
       class="border-2 border-neutral-800 p-3 flex justify-center gap-4">
-      <label class="w-full bg-neutral-100 text-black p-1 px-3 rounded-md hover:bg-neutral-300">
+      <label class="w-full bg-neutral-100 text-black p-1 px-3 rounded-sm hover:bg-neutral-300">
         📄Files
         <input 
           id="file-picker"
@@ -22,7 +24,7 @@
           multiple="multiple"
           class="hidden" />
       </label>
-      <label class="w-full bg-neutral-100 text-black p-1 px-3 rounded-md hover:bg-neutral-300">
+      <label class="w-full bg-neutral-100 text-black p-1 px-3 rounded-sm hover:bg-neutral-300">
         📁Folders
         <input id="folder-picker"
         type="file"
@@ -43,19 +45,24 @@
       <label
         id="toggle-password"
         for="password-input"
-        class="bg-neutral-700 w-16 rounded rounded-bl-none rounded-tl-none p-1 px-2 hover:bg-neutral-600">
+        class="bg-neutral-700 w-16 rounded-sm rounded-bl-none rounded-tl-none p-1 px-2 hover:bg-neutral-600">
         Show
       </label>
     </div>
 
-    <div id="files-container"><h3>Files</h3></div>
+    <div
+      id="files-container"
+      class="border-2 border-neutral-800 w-auto h-80 overflow-auto scrollbar scroll-smooth mt-1 text-1">
+      <h1
+        class="sticky top-0 left-0 bg-neutral-700 h-8 flex justify-center items-center font-semibold text-lg">
+        Selected files
+      </h1>
+    </div>
 
     <div id="encrypt-decrypt-btns">
       <button id="encrypt-btn">Encrypt</button>
       <button id="decrypt-btn">Decrypt</button>
     </div>
-
-    <hr />
 
   </body>
 </html>
