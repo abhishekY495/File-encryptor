@@ -1,19 +1,47 @@
 const browseFilesBtn = document.querySelector('#file-picker');
 const browseFoldersBtn = document.querySelector('#folder-picker');
-const filesContainer = document.querySelector('#files-container');
-export const filesList = [];
+const selectedFiles = document.querySelector('#selected-files');
+const clearBtn = document.querySelector('#clear-btn');
+export let filesList = [];
 
 browseFilesBtn.addEventListener('change', (e) => getFiles(e));
-browseFoldersBtn.addEventListener('change', (e) => getFiles(e));
+browseFoldersBtn.addEventListener('change', (e) => getFilesFromFolder(e));
 
 function getFiles(e) {
     const files = e.target.files;
     for (let file in files) {
-        const filePath = files[file].path;
+        const filePath = files[file].name;
         if (filePath) {
-            const element = `<li class="list-none w-full px-2 py-px text-start">${filePath}<span class="pl-2"></span></li><hr class="bg-zinc-700 h-px border-none sticky left-0">`;
-            filesContainer.innerHTML += element;
+            const element = `
+                <li class="list-none w-full px-2 py-px text-start hover:bg-neutral-800">
+                    ${filePath}<span class="pl-2 w-full"></span>
+                </li>`;
+            selectedFiles.innerHTML += element;
             filesList.push(filePath);
+            clearBtn.classList.remove('hidden');
         } else return;
     }
 }
+
+function getFilesFromFolder(e) {
+    const files = e.target.files;
+    for (let file in files) {
+        const filePath = files[file].webkitRelativePath;
+        if (filePath) {
+            const element = `
+            <li class="list-none w-full px-2 py-px text-start hover:bg-neutral-800">
+                ${filePath}<span class="pl-2 w-full"></span>
+            </li>`;
+            selectedFiles.innerHTML += element;
+            filesList.push(filePath);
+            clearBtn.classList.remove('hidden');
+        } else return;
+    }
+}
+
+// Clear Selected files
+clearBtn.addEventListener('click', () => {
+    filesList = [];
+    selectedFiles.innerHTML = '';
+    clearBtn.classList.add('hidden');
+})
