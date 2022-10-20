@@ -16,16 +16,16 @@
     <div
       id="browse-container"
       class="border-2 border-neutral-800 p-3 flex justify-center gap-4">
-      <label class="w-full bg-neutral-100 text-black p-1 px-3 rounded-sm hover:bg-neutral-300">
-        📄Files
+      <label class="w-full bg-neutral-100 text-black p-1 rounded-sm hover:bg-neutral-300">
+        📄 Files
         <input 
           id="file-picker"
           type="file"
           multiple="multiple"
           class="hidden" />
       </label>
-      <label class="w-full bg-neutral-100 text-black p-1 px-3 rounded-sm hover:bg-neutral-300">
-        📁Folders
+      <label class="w-full bg-neutral-100 text-black p-1 rounded-sm hover:bg-neutral-300">
+        📁 Folders
         <input id="folder-picker"
         type="file"
         webkitdirectory mozdirectory msdirectory odirectory directory multiple
@@ -52,16 +52,36 @@
 
     <div
       id="files-container"
-      class="border-2 border-neutral-800 w-auto h-80 overflow-auto scrollbar scroll-smooth mt-1 text-1">
-      <h1
-        class="sticky top-0 left-0 bg-neutral-700 h-8 flex justify-center items-center font-semibold text-lg">
+      class="border-2 border-neutral-800 w-auto h-72 overflow-auto whitespace-nowrap scrollbar scroll-smooth mt-1">
+      <span class="sticky top-0 left-0 bg-neutral-700 h-8 flex justify-center items-center font-semibold text-lg">
         Selected files
-      </h1>
+      </span>
+      <ul id="selected-files" class="divide-y divide-neutral-700"></ul>
     </div>
+    
+    <button id="clear-btn" class="hidden w-full bg-blue-200 text-black font-semibold text-lg">Clear All</button>
 
-    <div id="encrypt-decrypt-btns">
-      <button id="encrypt-btn">Encrypt</button>
-      <button id="decrypt-btn">Decrypt</button>
+    <div
+      id="encrypt-decrypt-btns"
+      class="border-2 border-neutral-800 px-2 py-3 flex justify-center gap-4">
+      <button
+        id="encrypt-btn"
+        class="w-full bg-neutral-100 text-black flex justify-center items-center p-1 rounded-sm hover:bg-red-200">
+        <img
+          src="../../assets/lock.svg"
+          alt="locked padlock"
+          class="pr-px">
+        Encrypt
+      </button>
+      <button
+        id="decrypt-btn"
+        class="w-full bg-neutral-100 text-black flex justify-center items-center p-1 rounded-sm hover:bg-green-200">
+        <img
+          src="../../assets/unlock.svg"
+          alt="unlocked padlock"
+          class="pr-px">
+        Decrypt
+      </button>
     </div>
 
   </body>
