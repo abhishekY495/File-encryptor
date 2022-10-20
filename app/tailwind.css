@@ -9,15 +9,17 @@
     }
     
     .scrollbar::-webkit-scrollbar-track {
-        background: #272727;
-        margin-top: 1.80rem;
+        background: #404040;
+        margin-top: 2rem;
+        border-radius: 0.8rem;
     }
     
     .scrollbar::-webkit-scrollbar-thumb {
-        background: #505050;
+        background: #606060;
+        border-radius: 0.8rem;
     }
   
     .scrollbar::-webkit-scrollbar-thumb:hover {
-        background: #767676;
+        background: #707070;
     }
   }
