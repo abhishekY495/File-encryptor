@@ -13,7 +13,7 @@ function getFiles(e) {
         const filePath = files[file].name;
         if (filePath) {
             const element = `
-                <li class="list-none w-full px-2 py-px text-start hover:bg-neutral-800">
+                <li class="list-none w-full px-2 py-px text-start border-b-2 border-neutral-700 hover:bg-neutral-800">
                     ${filePath}<span class="pl-2 w-full"></span>
                 </li>`;
             selectedFiles.innerHTML += element;
@@ -29,7 +29,7 @@ function getFilesFromFolder(e) {
         const filePath = files[file].webkitRelativePath;
         if (filePath) {
             const element = `
-            <li class="list-none w-full px-2 py-px text-start hover:bg-neutral-800">
+            <li class="list-none w-full px-2 py-px text-start border-b-2 border-neutral-700 hover:bg-neutral-800">
                 ${filePath}<span class="pl-2 w-full"></span>
             </li>`;
             selectedFiles.innerHTML += element;
