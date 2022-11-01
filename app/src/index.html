@@ -7,9 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>File Encryptor</title>
     <link rel="stylesheet" href="./styles.css" />
-    <script type="module" src="./js/index.js"></script>
     <script type="module" src="./js/togglePassword.js"></script>
     <script type="module" src="./js/browseFile.js"></script>
+    <script type="module" src="./js/encryptFile.js"></script>
   </head>
   <body class="text-center select-none bg-neutral-900 text-white m-2">
 
@@ -63,12 +63,12 @@
     
     <button
       id="clear-btn"
-      class="hidden w-full bg-blue-200 text-black font-semibold text-lg">
+      class="hidden w-full bg-blue-200 text-black font-semibold text-lg hover:bg-blue-300">
       Clear All
     </button>
 
     <div
-      id="encrypt-decrypt-btns"
+      id="encrypt-decrypt-btn-container"
       class="border-2 border-neutral-800 p-2 flex justify-center gap-4">
       <button
         id="encrypt-btn"
