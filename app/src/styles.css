@@ -782,6 +782,212 @@ video {
   background: #707070;
 }
 
+.shake-password-box::-moz-placeholder {
+  color: #ff5050;
+}
+
+.shake-password-box::placeholder {
+  color: #ff5050;
+}
+
+.shake-password-box {
+  -webkit-animation: shake 0.5s;
+          animation: shake 0.5s;
+  -webkit-animation-iteration-count: 0.5s;
+          animation-iteration-count: 0.5s;
+}
+
+@-webkit-keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+
+  10% {
+    transform: translateX(1px);
+  }
+
+  20% {
+    transform: translateX(-1px);
+  }
+
+  30% {
+    transform: translateX(1px);
+  }
+
+  40% {
+    transform: translateX(-1px);
+  }
+
+  50% {
+    transform: translateX(1px);
+  }
+
+  60% {
+    transform: translateX(-1px);
+  }
+
+  70% {
+    transform: translateX(1px);
+  }
+
+  80% {
+    transform: translateX(-1px);
+  }
+
+  90% {
+    transform: translateX(1px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+
+  10% {
+    transform: translateX(1px);
+  }
+
+  20% {
+    transform: translateX(-1px);
+  }
+
+  30% {
+    transform: translateX(1px);
+  }
+
+  40% {
+    transform: translateX(-1px);
+  }
+
+  50% {
+    transform: translateX(1px);
+  }
+
+  60% {
+    transform: translateX(-1px);
+  }
+
+  70% {
+    transform: translateX(1px);
+  }
+
+  80% {
+    transform: translateX(-1px);
+  }
+
+  90% {
+    transform: translateX(1px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.shake-selected-files {
+  -webkit-animation: shake2 2s;
+          animation: shake2 2s;
+  -webkit-animation-iteration-count: 2s;
+          animation-iteration-count: 2s;
+}
+
+@-webkit-keyframes shake2 {
+  0% {
+    transform: translateY(0);
+  }
+
+  10% {
+    transform: translateY(1px);
+  }
+
+  20% {
+    transform: translateY(-1px);
+  }
+
+  30% {
+    transform: translateY(1px);
+  }
+
+  40% {
+    transform: translateY(-1px);
+  }
+
+  50% {
+    transform: translateY(1px);
+  }
+
+  60% {
+    transform: translateY(-1px);
+  }
+
+  70% {
+    transform: translateY(1px);
+  }
+
+  80% {
+    transform: translateY(-1px);
+  }
+
+  90% {
+    transform: translateY(1px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes shake2 {
+  0% {
+    transform: translateY(0);
+  }
+
+  10% {
+    transform: translateY(1px);
+  }
+
+  20% {
+    transform: translateY(-1px);
+  }
+
+  30% {
+    transform: translateY(1px);
+  }
+
+  40% {
+    transform: translateY(-1px);
+  }
+
+  50% {
+    transform: translateY(1px);
+  }
+
+  60% {
+    transform: translateY(-1px);
+  }
+
+  70% {
+    transform: translateY(1px);
+  }
+
+  80% {
+    transform: translateY(-1px);
+  }
+
+  90% {
+    transform: translateY(1px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
 .hover\:cursor-pointer:hover {
   cursor: pointer;
 }
