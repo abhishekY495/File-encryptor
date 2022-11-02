@@ -3,23 +3,62 @@
 @tailwind utilities;
 
 @layer utilities {
-    .scrollbar::-webkit-scrollbar {
-        width: 10px;
-        height: 10px;
-    }
-    
-    .scrollbar::-webkit-scrollbar-track {
-        background: #404040;
-        margin-top: 2rem;
-        border-radius: 0.8rem;
-    }
-    
-    .scrollbar::-webkit-scrollbar-thumb {
-        background: #606060;
-        border-radius: 0.8rem;
-    }
-  
-    .scrollbar::-webkit-scrollbar-thumb:hover {
-        background: #707070;
-    }
+  .scrollbar::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
   }
+
+  .scrollbar::-webkit-scrollbar-track {
+    background: #404040;
+    margin-top: 2rem;
+    border-radius: 0.8rem;
+  }
+
+  .scrollbar::-webkit-scrollbar-thumb {
+    background: #606060;
+    border-radius: 0.8rem;
+  }
+
+  .scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #707070;
+  }
+
+  .shake-password-box::placeholder {
+    color: #ff5050;
+  }
+  .shake-password-box {
+    animation: shake 0.5s;
+    animation-iteration-count: 0.5s;
+  }
+  @keyframes shake {
+    0% { transform: translateX(0); }
+    10% { transform: translateX(1px); }
+    20% { transform: translateX(-1px); }
+    30% { transform: translateX(1px); }
+    40% { transform: translateX(-1px); }
+    50% { transform: translateX(1px); }
+    60% { transform: translateX(-1px); }
+    70% { transform: translateX(1px); }
+    80% { transform: translateX(-1px); }
+    90% { transform: translateX(1px); }
+    100% { transform: translateX(0); }
+  }
+
+  .shake-selected-files {
+    animation: shake2 2s;
+    animation-iteration-count: 2s;
+  }
+  @keyframes shake2 {
+    0% { transform: translateY(0); }
+    10% { transform: translateY(1px); }
+    20% { transform: translateY(-1px); }
+    30% { transform: translateY(1px); }
+    40% { transform: translateY(-1px); }
+    50% { transform: translateY(1px); }
+    60% { transform: translateY(-1px); }
+    70% { transform: translateY(1px); }
+    80% { transform: translateY(-1px); }
+    90% { transform: translateY(1px); }
+    100% { transform: translateY(0); }
+  }
+}
