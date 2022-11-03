@@ -9,13 +9,14 @@
     <link rel="stylesheet" href="./styles.css" />
     <script type="module" src="./js/togglePassword.js"></script>
     <script type="module" src="./js/browseFile.js"></script>
-    <script type="module" src="./js/encryptFile.js"></script>
+    <script type="module" src="./js/clearSelectedFiles.js"></script>
+    <script type="module" src="./js/fileEncryptDecrypt.js"></script>
   </head>
   <body class="text-center select-none bg-neutral-900 text-white m-2">
 
     <div
       id="browse-container"
-      class="border-2 border-neutral-800 p-3 flex justify-center gap-4">
+      class="border-2 border-neutral-800 p-2 flex justify-center gap-4">
       <label class="w-full bg-neutral-100 text-black p-1 rounded-sm hover:bg-neutral-300 hover:cursor-pointer">
         📄 Files
         <input 
@@ -35,12 +36,12 @@
 
     <div
       id="password-container"
-      class="border-2 border-neutral-800 p-2 px-3 flex justify-around items-center content-center">
+      class="border-2 border-neutral-800 p-2 px-2 flex justify-around items-center content-center">
       <input
         type="password"
         id="password-input"
         placeholder="Enter Password"
-        class="text-black w-full rounded-sm rounded-tr-none rounded-br-none h-8 px-2 focus:outline-none focus:border-red-500 focus:border"
+        class="text-black w-full rounded-sm rounded-tr-none rounded-br-none h-8 px-2 focus:outline-none focus:border-purple-500 focus:border"
       />
       <label
         id="toggle-password"
@@ -52,9 +53,9 @@
 
     <div
       id="files-container"
-      class="border-2 border-neutral-800 w-auto h-72 overflow-auto whitespace-nowrap scrollbar scroll-smooth mt-1">
-      <span class="sticky top-0 left-0 bg-neutral-700 h-8 flex justify-center items-center font-semibold text-lg">
-        Selected files
+      class="border-2 border-neutral-800 w-auto h-80 overflow-auto whitespace-nowrap scrollbar scroll-smooth mt-1">
+      <span id="files-container-title" class="sticky top-0 left-0 bg-neutral-700 h-8 flex justify-center items-center font-semibold text-lg">
+        Selected Files
       </span>
       <ul
         id="selected-files">
@@ -62,8 +63,9 @@
     </div>
     
     <button
+      disabled
       id="clear-btn"
-      class="hidden w-full bg-blue-200 text-black font-semibold text-lg hover:bg-blue-300">
+      class="w-full bg-blue-200 text-black font-semibold text-lg hover:bg-blue-300 opacity-30">
       Clear All
     </button>
 
@@ -88,6 +90,11 @@
           class="pr-px">
         Decrypt
       </button>
+    </div>
+
+    <div id="progress-bar" class="border-2 border-neutral-800 w-full h-7 px-[5px] py-4 flex justify-between items-center">
+      <div class="h-6 bg-[#d35252] rounded-sm" style="width:80%"></div>
+      <span class="pl-[3px]">80%</span>
     </div>
 
   </body>
