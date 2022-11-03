@@ -44,7 +44,7 @@
     100% { transform: translateX(0); }
   }
 
-  .shake-selected-files {
+  .shake-files-container-title {
     animation: shake2 2s;
     animation-iteration-count: 2s;
   }
