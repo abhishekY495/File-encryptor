@@ -11,14 +11,13 @@ const app = {
     return Buffer.concat([salt, authTag, encryptedData]);
   },
   decrypt: function (data, password) {
-    const salt = data.subarray(0, 16);
-    const authTag = data.subarray(16, 32);
-    const encData = data.subarray(32, data.length);
-    const key = nodeCrypto.pbkdf2Sync(password, salt, 5, 32, "sha256");
-    const decipher = nodeCrypto.createDecipheriv("aes-256-gcm", key, salt);
-    decipher.setAuthTag(authTag);
-
     try {
+      const salt = data.subarray(0, 16);
+      const authTag = data.subarray(16, 32);
+      const encData = data.subarray(32, data.length);
+      const key = nodeCrypto.pbkdf2Sync(password, salt, 5, 32, "sha256");
+      const decipher = nodeCrypto.createDecipheriv("aes-256-gcm", key, salt);
+      decipher.setAuthTag(authTag);
       const plainText = Buffer.concat([
         decipher.update(encData),
         decipher.final(),
