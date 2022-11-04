@@ -17,7 +17,7 @@
     <div
       id="browse-container"
       class="border-2 border-neutral-800 p-2 flex justify-center gap-4">
-      <label class="w-full bg-neutral-100 text-black p-1 rounded-sm hover:bg-neutral-300 hover:cursor-pointer">
+      <label class="w-full bg-neutral-100 text-black p-1 rounded-sm hover:bg-neutral-300 hover:cursor-pointer active:scale-[0.99] transition-all duration-[0.05s]">
         📄 Files
         <input 
           id="file-picker"
@@ -25,7 +25,7 @@
           multiple="multiple"
           class="hidden" />
       </label>
-      <label class="w-full bg-neutral-100 text-black p-1 rounded-sm hover:bg-neutral-300 hover:cursor-pointer">
+      <label class="w-full bg-neutral-100 text-black p-1 rounded-sm hover:bg-neutral-300 hover:cursor-pointer active:scale-[0.99] transition-all duration-[0.05s]">
         📁 Folders
         <input id="folder-picker"
         type="file"
@@ -41,7 +41,7 @@
         type="password"
         id="password-input"
         placeholder="Enter Password"
-        class="text-black w-full rounded-sm rounded-tr-none rounded-br-none h-8 px-2 focus:outline-none focus:border-purple-500 focus:border"
+        class="text-black w-full rounded-sm rounded-tr-none rounded-br-none h-8 px-2 focus:outline-none focus:border-blue-500 focus:border"
       />
       <label
         id="toggle-password"
@@ -74,7 +74,7 @@
       class="border-2 border-neutral-800 p-2 flex justify-center gap-4">
       <button
         id="encrypt-btn"
-        class="w-full bg-neutral-100 text-black flex justify-center items-center p-1 rounded-sm hover:bg-red-200">
+        class="w-full bg-neutral-100 text-black flex justify-center items-center p-1 rounded-sm hover:bg-red-200 active:scale-[0.99] transition-all duration-[0.05s]">
         <img
           src="../../assets/lock.svg"
           alt="locked padlock"
@@ -83,7 +83,7 @@
       </button>
       <button
         id="decrypt-btn"
-        class="w-full bg-neutral-100 text-black flex justify-center items-center p-1 rounded-sm hover:bg-green-200">
+        class="w-full bg-neutral-100 text-black flex justify-center items-center p-1 rounded-sm hover:bg-green-200 active:scale-[0.99] transition-all duration-[0.05s]">
         <img
           src="../../assets/unlock.svg"
           alt="unlocked padlock"
@@ -92,10 +92,7 @@
       </button>
     </div>
 
-    <div id="progress-bar" class="border-2 border-neutral-800 w-full h-7 px-[5px] py-4 flex justify-between items-center">
-      <div class="h-6 bg-[#d35252] rounded-sm" style="width:80%"></div>
-      <span class="pl-[3px]">80%</span>
-    </div>
+
 
   </body>
 </html>
