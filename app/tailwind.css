@@ -25,6 +25,8 @@
 
   .shake-password-box::placeholder {
     color: #ff5050;
+    font-size: larger;
+    text-align: center;
   }
   .shake-password-box {
     animation: shake 0.5s;
@@ -60,5 +62,15 @@
     80% { transform: translateY(-1px); }
     90% { transform: translateY(1px); }
     100% { transform: translateY(0); }
+  }
+
+  .progress-on {
+    transform-origin: 0% 100%;
+    animation: indeterminate 0.3s infinite linear;
+  }
+  @keyframes indeterminate {
+    0% { transform: translateX(0) scaleX(0); }
+    50% { transform: translateX(0) scaleX(0.5); }
+    100% { transform: translateX(100%) scaleX(0.5); }
   }
 }
