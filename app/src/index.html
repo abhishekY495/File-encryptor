@@ -18,7 +18,8 @@
     <div
       id="browse-container"
       class="border-2 border-neutral-800 p-2 flex justify-center gap-4">
-      <label class="w-full bg-neutral-100 text-black p-1 rounded-sm hover:bg-neutral-300 hover:cursor-pointer active:scale-[0.99] transition-all duration-[0.05s]">
+      <label
+        class="w-full bg-neutral-100 text-black p-1 rounded-sm hover:bg-neutral-300 hover:cursor-pointer active:scale-[0.99] transition-all duration-[0.05s]">
         📄 Files
         <input 
           id="file-picker"
@@ -26,12 +27,14 @@
           multiple="multiple"
           class="hidden" />
       </label>
-      <label class="w-full bg-neutral-100 text-black p-1 rounded-sm hover:bg-neutral-300 hover:cursor-pointer active:scale-[0.99] transition-all duration-[0.05s]">
+      <label
+        class="w-full bg-neutral-100 text-black p-1 rounded-sm hover:bg-neutral-300 hover:cursor-pointer active:scale-[0.99] transition-all duration-[0.05s]">
         📁 Folders
-        <input id="folder-picker"
-        type="file"
-        webkitdirectory mozdirectory msdirectory odirectory directory multiple
-        class="hidden"/>
+        <input
+          id="folder-picker"
+          type="file"
+          webkitdirectory mozdirectory msdirectory odirectory directory multiple
+          class="hidden"/>
       </label>
     </div>
 
@@ -55,7 +58,9 @@
     <div
       id="files-container"
       class="border-2 border-neutral-800 w-auto h-80 overflow-auto whitespace-nowrap scrollbar scroll-smooth mt-1">
-      <span id="files-container-title" class="sticky top-0 left-0 bg-neutral-700 h-8 flex justify-center items-center font-semibold text-lg">
+      <span
+        id="files-container-title"
+        class="sticky top-0 left-0 bg-neutral-700 h-8 flex justify-center items-center font-semibold text-lg">
         Selected Files
       </span>
       <ul
@@ -75,7 +80,7 @@
       class="border-2 border-neutral-800 p-2 flex justify-center gap-4">
       <button
         id="encrypt-btn"
-        class="w-full bg-red-100 text-black flex justify-center items-center p-1 rounded-sm hover:bg-red-200 active:scale-[0.98] transition-all duration-[0.05s]">
+        class="w-full bg-[#fff0f0] text-black flex justify-center items-center p-1 rounded-sm hover:bg-red-200 active:scale-[0.98] transition-all duration-[0.05s]">
         <img
           src="../../assets/lock.svg"
           alt="locked padlock"
@@ -84,7 +89,7 @@
       </button>
       <button
         id="decrypt-btn"
-        class="w-full bg-green-100 text-black flex justify-center items-center p-1 rounded-sm hover:bg-green-200 active:scale-[0.98] transition-all duration-[0.05s]">
+        class="w-full bg-[#f1fff0] text-black flex justify-center items-center p-1 rounded-sm hover:bg-green-200 active:scale-[0.98] transition-all duration-[0.05s]">
         <img
           src="../../assets/unlock.svg"
           alt="unlocked padlock"
