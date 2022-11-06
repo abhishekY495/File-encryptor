@@ -23,7 +23,6 @@ async function encryptFile(fileLocation, password) {
       transform(chunk, encoding, callback) {
         const encryptedData = app.encrypt(chunk, password);
         callback(null, encryptedData);
-        console.log("File encrypted");
       },
     }),
     fileWriteStream

@@ -37,7 +37,6 @@ async function decryptFile(encFileLocation, password) {
             fs.unlinkSync(newDecFile);
           } else {
             callback(null, decryptedData);
-            console.log("File Decrypted");
           }
         },
       }),
