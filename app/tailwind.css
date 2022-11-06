@@ -26,6 +26,7 @@
   .shake-password-box::placeholder {
     color: #ff5050;
     font-size: larger;
+    font-weight: 500;
     text-align: center;
   }
   .shake-password-box {
@@ -72,5 +73,13 @@
     0% { transform: translateX(0) scaleX(0); }
     50% { transform: translateX(0) scaleX(0.5); }
     100% { transform: translateX(100%) scaleX(0.5); }
+  }
+
+  .shake-up-down {
+    animation: shake2 2.5s infinite linear;
+  }
+
+  .wrong-password-shake {
+    animation: shake2 1.3s infinite linear;
   }
 }
