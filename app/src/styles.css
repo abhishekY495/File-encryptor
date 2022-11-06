@@ -924,17 +924,15 @@ video {
 }
 
 .shake-password-box::-moz-placeholder {
-  color: orangered;
-  font-size: larger;
-  font-weight: 400;
-  text-align: center;
+  color: #ff5050;
+  font-size: large;
+  font-weight: 500;
 }
 
 .shake-password-box::placeholder {
-  color: orangered;
-  font-size: larger;
-  font-weight: 400;
-  text-align: center;
+  color: #ff5050;
+  font-size: large;
+  font-weight: 500;
 }
 
 .shake-password-box {
