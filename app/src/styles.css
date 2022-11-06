@@ -759,6 +759,16 @@ video {
   background-color: rgb(200 100 100 / var(--tw-bg-opacity));
 }
 
+.bg-\[red\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 0 0 / var(--tw-bg-opacity));
+}
+
+.bg-red-200 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(254 202 202 / var(--tw-bg-opacity));
+}
+
 .bg-\[limegreen\] {
   --tw-bg-opacity: 1;
   background-color: rgb(50 205 50 / var(--tw-bg-opacity));
@@ -769,14 +779,19 @@ video {
   background-color: rgb(219 61 61 / var(--tw-bg-opacity));
 }
 
-.bg-\[red\] {
+.bg-green-200 {
   --tw-bg-opacity: 1;
-  background-color: rgb(255 0 0 / var(--tw-bg-opacity));
+  background-color: rgb(187 247 208 / var(--tw-bg-opacity));
 }
 
-.bg-red-200 {
+.bg-red-100 {
   --tw-bg-opacity: 1;
-  background-color: rgb(254 202 202 / var(--tw-bg-opacity));
+  background-color: rgb(254 226 226 / var(--tw-bg-opacity));
+}
+
+.bg-green-100 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(220 252 231 / var(--tw-bg-opacity));
 }
 
 .p-2 {
@@ -799,6 +814,46 @@ video {
 .py-px {
   padding-top: 1px;
   padding-bottom: 1px;
+}
+
+.py-2 {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.py-1 {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
+.py-\[5px\] {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.py-\[3px\] {
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+
+.py-\[4px\] {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.py-\[1px\] {
+  padding-top: 1px;
+  padding-bottom: 1px;
+}
+
+.py-\[4\.2px\] {
+  padding-top: 4.2px;
+  padding-bottom: 4.2px;
+}
+
+.py-\[4\.5px\] {
+  padding-top: 4.5px;
+  padding-bottom: 4.5px;
 }
 
 .pr-px {
@@ -824,6 +879,51 @@ video {
 .text-lg {
   font-size: 1.125rem;
   line-height: 1.75rem;
+}
+
+.text-base {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.text-\[1rem\] {
+  font-size: 1rem;
+}
+
+.text-\[1\.5rem\] {
+  font-size: 1.5rem;
+}
+
+.text-\[1\.1rem\] {
+  font-size: 1.1rem;
+}
+
+.text-\[1\.01rem\] {
+  font-size: 1.01rem;
+}
+
+.text-\[1\.05rem\] {
+  font-size: 1.05rem;
+}
+
+.text-\[1\.08rem\] {
+  font-size: 1.08rem;
+}
+
+.text-\[1\.06rem\] {
+  font-size: 1.06rem;
+}
+
+.text-\[1\.07rem\] {
+  font-size: 1.07rem;
+}
+
+.text-\[1\.04rem\] {
+  font-size: 1.04rem;
+}
+
+.text-\[1\.03rem\] {
+  font-size: 1.03rem;
 }
 
 .font-semibold {
@@ -907,12 +1007,14 @@ video {
 .shake-password-box::-moz-placeholder {
   color: #ff5050;
   font-size: larger;
+  font-weight: 500;
   text-align: center;
 }
 
 .shake-password-box::placeholder {
   color: #ff5050;
   font-size: larger;
+  font-weight: 500;
   text-align: center;
 }
 
@@ -1196,9 +1298,26 @@ video {
   border-width: 1px;
 }
 
+.focus\:border-2:focus {
+  border-width: 2px;
+}
+
+.focus\:border-\[1\.5px\]:focus {
+  border-width: 1.5px;
+}
+
+.focus\:border-\[2px\]:focus {
+  border-width: 2px;
+}
+
 .focus\:border-blue-500:focus {
   --tw-border-opacity: 1;
   border-color: rgb(59 130 246 / var(--tw-border-opacity));
+}
+
+.focus\:border-yellow-500:focus {
+  --tw-border-opacity: 1;
+  border-color: rgb(234 179 8 / var(--tw-border-opacity));
 }
 
 .focus\:outline-none:focus {
