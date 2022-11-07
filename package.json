@@ -2,20 +2,34 @@
   "name": "file-encryptor",
   "productName": "File Encryptor",
   "version": "1.0.0",
-  "description": "A simple app to encrypt your files.",
+  "description": "An app to encrypt/decrypt files with a password.",
   "main": "./app/electron/main.js",
   "scripts": {
     "start": "electron .",
     "build-css": "tailwindcss -i ./app/tailwind.css -o ./app/src/styles.css",
-    "watch-css": "tailwindcss -i ./app/tailwind.css -o ./app/src/styles.css --watch"
+    "watch-css": "tailwindcss -i ./app/tailwind.css -o ./app/src/styles.css --watch",
+    "build-installer": "electron-builder"
+  },
+  "build": {
+    "appId": "com.fileEncryptor.app",
+    "win": {
+      "target": ["nsis"],
+      "icon": "./assets/icon.ico"
+    },
+    "nsis": {
+      "installerIcon": "./assets/icon.ico",
+      "uninstallerIcon": "./assets/icon.ico",
+      "uninstallDisplayName": "File Encryptor",
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    }
   },
   "keywords": [],
   "author": "Abhishek",
-  "license": "ISC",
-  "dependencies": {
-    "electron": "^21.1.0"
-  },
+  "license": "MIT",
   "devDependencies": {
+    "electron": "^21.1.0",
+    "electron-builder": "^23.6.0",
     "tailwindcss": "^3.1.8"
   }
 }
