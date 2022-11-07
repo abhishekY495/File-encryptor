@@ -15,8 +15,8 @@ export function wrongPassword() {
   //
   messageBox.innerHTML = "";
   messageBox.innerHTML = `Wrong Password`;
-  messageBox.classList.remove("w-[290px]");
-  messageBox.classList.add("w-[210px]");
+  messageBox.classList.remove("mx-2");
+  messageBox.classList.add("m-auto");
   messageBox.classList.remove("shake-up-down");
   messageBox.classList.add("wrong-password-shake");
   messageBox.classList.remove("bg-neutral-100");

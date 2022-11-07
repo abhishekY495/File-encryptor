@@ -12,6 +12,9 @@ export function decryptionProgress() {
   progressBarContainer.classList.remove("opacity-10");
   //
   messageBox.innerHTML = "";
-  messageBox.innerHTML = `Decrypting Files <span class="text-[limegreen]">●</span> Do Not Close`;
+  messageBox.classList.remove("mx-2");
+  messageBox.classList.add("m-auto");
   messageBox.classList.remove("opacity-10");
+  messageBox.classList.add("w-fit");
+  messageBox.innerHTML = `Decrypting Files <span class="text-[limegreen]">&nbsp●&nbsp</span> Do Not Close`;
 }

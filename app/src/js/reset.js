@@ -43,11 +43,12 @@ function reset() {
   //
   messageBox.innerHTML = "";
   messageBox.classList.remove("w-fit");
-  messageBox.classList.add("w-[290px]");
+  messageBox.classList.add("mx-2");
+  messageBox.classList.add("my-[10px]");
+  messageBox.classList.remove("m-auto");
   messageBox.classList.add("opacity-10");
   messageBox.classList.remove("shake-up-down");
   messageBox.classList.remove("wrong-password-shake");
-  //
   messageBox.classList.add("bg-neutral-100");
   messageBox.classList.remove("bg-red-200");
   messageBox.classList.remove("text-[red]");
