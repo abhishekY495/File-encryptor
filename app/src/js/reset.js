@@ -42,7 +42,7 @@ function reset() {
   progressBar.classList.remove("bg-[red]");
   //
   messageBox.innerHTML = "";
-  messageBox.classList.remove("w-[210px]");
+  messageBox.classList.remove("w-fit");
   messageBox.classList.add("w-[290px]");
   messageBox.classList.add("opacity-10");
   messageBox.classList.remove("shake-up-down");
