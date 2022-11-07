@@ -568,13 +568,14 @@ video {
   margin: auto;
 }
 
-.my-2 {
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
+.mx-2 {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
 }
 
-.mb-3 {
-  margin-bottom: 0.75rem;
+.my-\[10px\] {
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .mt-3 {
@@ -593,8 +594,8 @@ video {
   height: 2rem;
 }
 
-.h-\[295px\] {
-  height: 295px;
+.h-\[300px\] {
+  height: 300px;
 }
 
 .h-\[35px\] {
@@ -613,8 +614,8 @@ video {
   height: 100%;
 }
 
-.h-\[300px\] {
-  height: 300px;
+.h-\[34px\] {
+  height: 34px;
 }
 
 .w-full {
@@ -629,18 +630,14 @@ video {
   width: auto;
 }
 
-.w-\[290px\] {
-  width: 290px;
-}
-
-.w-\[210px\] {
-  width: 210px;
-}
-
 .w-fit {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+}
+
+.w-\[290px\] {
+  width: 290px;
 }
 
 .select-none {
@@ -745,6 +742,11 @@ video {
   background-color: rgb(245 245 245 / var(--tw-bg-opacity));
 }
 
+.bg-neutral-200 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(229 229 229 / var(--tw-bg-opacity));
+}
+
 .bg-neutral-700 {
   --tw-bg-opacity: 1;
   background-color: rgb(64 64 64 / var(--tw-bg-opacity));
@@ -800,38 +802,16 @@ video {
   background-color: rgb(212 212 212 / var(--tw-bg-opacity));
 }
 
-.bg-slate-300 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(203 213 225 / var(--tw-bg-opacity));
-}
-
-.bg-neutral-200 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(229 229 229 / var(--tw-bg-opacity));
-}
-
 .p-3 {
   padding: 0.75rem;
 }
 
-.p-2 {
-  padding: 0.5rem;
+.p-\[5\.5px\] {
+  padding: 5.5px;
 }
 
 .p-1 {
   padding: 0.25rem;
-}
-
-.p-\[6px\] {
-  padding: 6px;
-}
-
-.p-\[5px\] {
-  padding: 5px;
-}
-
-.p-\[5\.5px\] {
-  padding: 5.5px;
 }
 
 .py-\[10px\] {
@@ -844,9 +824,9 @@ video {
   padding-right: 0.5rem;
 }
 
-.px-3 {
-  padding-left: 0.75rem;
-  padding-right: 0.75rem;
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .py-px {
@@ -958,13 +938,13 @@ video {
 }
 
 .shake-password-box::-moz-placeholder {
-  color: #ff5050;
+  color: #ff3737;
   font-size: large;
   font-weight: 500;
 }
 
 .shake-password-box::placeholder {
-  color: #ff5050;
+  color: #ff3737;
   font-size: large;
   font-weight: 500;
 }
@@ -1205,6 +1185,16 @@ video {
 .wrong-password-shake {
   -webkit-animation: shake2 1.3s infinite linear;
           animation: shake2 1.3s infinite linear;
+}
+
+.placeholder\:text-neutral-500::-moz-placeholder {
+  --tw-text-opacity: 1;
+  color: rgb(115 115 115 / var(--tw-text-opacity));
+}
+
+.placeholder\:text-neutral-500::placeholder {
+  --tw-text-opacity: 1;
+  color: rgb(115 115 115 / var(--tw-text-opacity));
 }
 
 .hover\:cursor-pointer:hover {
