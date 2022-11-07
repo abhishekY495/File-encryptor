@@ -13,11 +13,11 @@
     <script type="module" src="./js/fileEncryptDecrypt.js"></script>
     <script type="module" src="./js/reset.js"></script>
   </head>
-  <body class="text-center select-none bg-[#0c0c0c] text-white m-2 text-[1.1rem]">
+  <body class="text-center select-none bg-[#0c0c0c] text-white text-[1.1rem]">
 
     <div
       id="browse-container"
-      class="border-2 border-neutral-800 p-2 flex justify-center gap-4">
+      class="border-2 border-neutral-800 p-3 flex justify-center gap-4">
       <label
         class="w-full bg-neutral-100 text-black p-1 rounded-sm hover:bg-neutral-300 hover:cursor-pointer active:scale-[0.99] transition-all duration-[0.05s]">
         📄 Files
@@ -40,27 +40,27 @@
 
     <div
       id="password-container"
-      class="border-2 border-neutral-800 p-2 px-2 flex justify-around items-center content-center">
+      class="border-2 border-neutral-800 p-3 py-[10px] flex justify-around items-center content-center">
       <input
         type="password"
         id="password-input"
         placeholder="Enter Password"
-        class="text-black w-full rounded-sm rounded-tr-none rounded-br-none h-8 px-2 focus:outline-none focus:border-yellow-500 focus:border-2"
+        class="text-black w-full rounded-sm rounded-tr-none rounded-br-none h-9 px-2 focus:outline-none focus:border-yellow-500 focus:border-2"
       />
       <label
         id="toggle-password"
         for="password-input"
-        class="bg-neutral-700 w-16 rounded-sm rounded-bl-none rounded-tl-none p-1 px-2 hover:bg-neutral-600 hover:cursor-pointer">
+        class="bg-neutral-700 w-16 rounded-sm rounded-bl-none h-9 rounded-tl-none p-1 px-2 hover:bg-neutral-600 hover:cursor-pointer">
         Show
       </label>
     </div>
 
     <div
       id="files-container"
-      class="border-2 border-neutral-800 w-auto h-[312px] overflow-auto whitespace-nowrap scrollbar scroll-smooth mt-1">
+      class="border-2 border-neutral-800 w-auto h-[295px] overflow-auto whitespace-nowrap scrollbar scroll-smooth">
       <span
         id="files-container-title"
-        class="sticky top-0 left-0 bg-neutral-700 h-8 flex justify-center items-center font-semibold text-lg">
+        class="sticky top-0 left-0 bg-neutral-700 h-[35px] flex justify-center items-center font-semibold text-lg">
         Selected Files
       </span>
       <ul
@@ -71,13 +71,13 @@
     <button
       disabled
       id="clear-btn"
-      class="w-full bg-blue-200 text-black font-semibold text-lg hover:bg-blue-300 opacity-10">
+      class="w-full bg-blue-200 h-8 text-black font-semibold text-lg hover:bg-blue-300 opacity-10">
       Clear All
     </button>
 
     <div
       id="encrypt-decrypt-btn-container"
-      class="border-2 border-neutral-800 p-2 flex justify-center gap-4">
+      class="border-2 border-neutral-800 p-3 flex justify-center gap-4">
       <button
         id="encrypt-btn"
         class="w-full bg-[#fff0f0] text-black flex justify-center items-center p-1 rounded-sm hover:bg-red-200 active:scale-[0.98] transition-all duration-[0.05s]">
@@ -103,21 +103,25 @@
       class="my-2 font-semibold h-[33px] mb-3 w-[290px] px-3 m-auto flex items-center justify-center rounded-full text-black bg-neutral-100 opacity-10">
     </p>
 
-    <div
-      id="progress-bar-container"
-      class="bg-neutral-100 w-full h-3 flex items-center rounded overflow-hidden opacity-10">
-        <div
-          id="progress-bar"
-          class="h-full rounded w-full">
-        </div>
+    <div class="px-2">
+      <div
+        id="progress-bar-container"
+        class="bg-neutral-100 w-full h-3 flex items-center rounded overflow-hidden opacity-10">
+          <div
+            id="progress-bar"
+            class="h-full rounded w-full">
+          </div>
+      </div>
     </div>
 
-    <button
-      disabled
-      id="reset-btn"
-      class="bg-blue-200 text-black text-lg font-medium tracking-wide w-full rounded mt-3 hover:bg-blue-300 active:scale-x-[0.99] transition-all duration-[0.05s] opacity-10">
-      Reset
-    </button>
+    <div class="px-2">
+      <button
+        disabled
+        id="reset-btn"
+        class="bg-blue-200 text-black text-lg h-8 font-medium tracking-wide w-full rounded mt-3 hover:bg-blue-300 active:scale-x-[0.99] transition-all duration-[0.05s] opacity-10">
+        Reset
+      </button>
+    </div>
 
   </body>
 </html>
