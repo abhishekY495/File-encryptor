@@ -3,13 +3,14 @@ const { app, BrowserWindow, Menu } = require("electron");
 const { menuTemplate } = require("./menuTemplate.js");
 
 const isMac = process.platform === "darwin";
+const isDev = false;
 
 function createMainWindow() {
   const mainWindow = new BrowserWindow({
     title: "File encryptor",
     width: 420,
     height: 690,
-    // resizable: false,
+    resizable: isDev ? true : false ,
     icon: path.join(__dirname, "./icon.ico"),
     webPreferences: {
       contextIsolation: true,
@@ -18,7 +19,10 @@ function createMainWindow() {
     },
   });
 
-  mainWindow.webContents.openDevTools();
+  // Open DevTools
+  if (isDev) {
+    mainWindow.webContents.openDevTools();
+  }
 
   mainWindow.loadFile(path.join(__dirname, "../src/index.html"));
 }
