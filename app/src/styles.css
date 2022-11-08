@@ -564,8 +564,16 @@ video {
   left: 0px;
 }
 
+.m-1 {
+  margin: 0.25rem;
+}
+
 .m-auto {
   margin: auto;
+}
+
+.m-2 {
+  margin: 0.5rem;
 }
 
 .mx-2 {
@@ -576,6 +584,11 @@ video {
 .my-\[10px\] {
   margin-top: 10px;
   margin-bottom: 10px;
+}
+
+.mx-3 {
+  margin-left: 0.75rem;
+  margin-right: 0.75rem;
 }
 
 .mt-3 {
@@ -732,6 +745,11 @@ video {
   border-color: rgb(64 64 64 / var(--tw-border-opacity));
 }
 
+.bg-neutral-800 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(38 38 38 / var(--tw-bg-opacity));
+}
+
 .bg-\[\#0c0c0c\] {
   --tw-bg-opacity: 1;
   background-color: rgb(12 12 12 / var(--tw-bg-opacity));
@@ -802,6 +820,21 @@ video {
   background-color: rgb(212 212 212 / var(--tw-bg-opacity));
 }
 
+.bg-neutral-900 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(23 23 23 / var(--tw-bg-opacity));
+}
+
+.bg-\[rgb\(38\2c 38\2c 38\)\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(38 38 38 / var(--tw-bg-opacity));
+}
+
+.bg-\[rgb\(27\2c 27\2c 27\)\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(27 27 27 / var(--tw-bg-opacity));
+}
+
 .p-3 {
   padding: 0.75rem;
 }
@@ -846,6 +879,10 @@ video {
   text-align: center;
 }
 
+.text-justify {
+  text-align: justify;
+}
+
 .text-start {
   text-align: start;
 }
@@ -865,6 +902,10 @@ video {
 
 .font-medium {
   font-weight: 500;
+}
+
+.leading-relaxed {
+  line-height: 1.625;
 }
 
 .tracking-wide {
@@ -889,6 +930,16 @@ video {
 .text-\[limegreen\] {
   --tw-text-opacity: 1;
   color: rgb(50 205 50 / var(--tw-text-opacity));
+}
+
+.text-blue-500 {
+  --tw-text-opacity: 1;
+  color: rgb(59 130 246 / var(--tw-text-opacity));
+}
+
+.text-blue-400 {
+  --tw-text-opacity: 1;
+  color: rgb(96 165 250 / var(--tw-text-opacity));
 }
 
 .opacity-10 {
@@ -1185,16 +1236,6 @@ video {
 .wrong-password-shake {
   -webkit-animation: shake2 1.3s infinite linear;
           animation: shake2 1.3s infinite linear;
-}
-
-.placeholder\:text-neutral-500::-moz-placeholder {
-  --tw-text-opacity: 1;
-  color: rgb(115 115 115 / var(--tw-text-opacity));
-}
-
-.placeholder\:text-neutral-500::placeholder {
-  --tw-text-opacity: 1;
-  color: rgb(115 115 115 / var(--tw-text-opacity));
 }
 
 .hover\:cursor-pointer:hover {

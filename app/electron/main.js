@@ -11,7 +11,7 @@ function createMainWindow() {
     width: 420,
     height: 690,
     resizable: isDev ? true : false ,
-    icon: path.join(__dirname, "./icon.ico"),
+    icon: path.join(__dirname, "./icons/app-icon.ico"),
     webPreferences: {
       contextIsolation: true,
       nodeIntegration: true,
