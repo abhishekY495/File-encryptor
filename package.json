@@ -14,7 +14,7 @@
     "appId": "com.fileEncryptor.app",
     "win": {
       "target": ["nsis"],
-      "icon": "./assets/app-icon.ico"
+      "icon": "./assets/icons/app-icon.ico"
     },
     "nsis": {
       "installerIcon": "./assets/icons/installer-icon.ico",

@@ -564,21 +564,18 @@ video {
   left: 0px;
 }
 
-.m-2 {
-  margin: 0.5rem;
-}
-
 .m-auto {
   margin: auto;
 }
 
-.m-3 {
-  margin: 0.75rem;
+.my-3 {
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
 }
 
-.mx-3 {
-  margin-left: 0.75rem;
-  margin-right: 0.75rem;
+.mx-4 {
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 
 .mx-2 {
@@ -591,48 +588,12 @@ video {
   margin-bottom: 10px;
 }
 
-.mx-4 {
-  margin-left: 1rem;
-  margin-right: 1rem;
-}
-
-.my-auto {
-  margin-top: auto;
-  margin-bottom: auto;
-}
-
-.my-2 {
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
-}
-
-.my-3 {
-  margin-top: 0.75rem;
-  margin-bottom: 0.75rem;
+.mt-\[12px\] {
+  margin-top: 12px;
 }
 
 .mt-3 {
   margin-top: 0.75rem;
-}
-
-.mt-4 {
-  margin-top: 1rem;
-}
-
-.mt-\[14px\] {
-  margin-top: 14px;
-}
-
-.mt-\[13px\] {
-  margin-top: 13px;
-}
-
-.mt-\[11px\] {
-  margin-top: 11px;
-}
-
-.mt-\[12px\] {
-  margin-top: 12px;
 }
 
 .flex {
@@ -723,20 +684,12 @@ video {
   justify-content: space-around;
 }
 
-.gap-4 {
-  gap: 1rem;
-}
-
-.gap-1 {
-  gap: 0.25rem;
-}
-
-.gap-\[2px\] {
-  gap: 2px;
-}
-
 .gap-2 {
   gap: 0.5rem;
+}
+
+.gap-4 {
+  gap: 1rem;
 }
 
 .overflow-auto {
@@ -814,11 +767,6 @@ video {
 .bg-neutral-100 {
   --tw-bg-opacity: 1;
   background-color: rgb(245 245 245 / var(--tw-bg-opacity));
-}
-
-.bg-neutral-200 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(229 229 229 / var(--tw-bg-opacity));
 }
 
 .bg-neutral-700 {
