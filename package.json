@@ -14,11 +14,11 @@
     "appId": "com.fileEncryptor.app",
     "win": {
       "target": ["nsis"],
-      "icon": "./assets/icon.ico"
+      "icon": "./assets/app-icon.ico"
     },
     "nsis": {
-      "installerIcon": "./assets/icon.ico",
-      "uninstallerIcon": "./assets/icon.ico",
+      "installerIcon": "./assets/icons/installer-icon.ico",
+      "uninstallerIcon": "./assets/icons/uninstaller-icon.ico",
       "uninstallDisplayName": "File Encryptor",
       "oneClick": false,
       "allowToChangeInstallationDirectory": true
