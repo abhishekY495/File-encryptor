@@ -33,7 +33,12 @@ function clickHandler(operation, doneFunc, progressFunc) {
         return operation(fileLocation, password);
       })
     )
-      .then(() => doneFunc())
+      .then(() => {
+        filesList.map((file) => {
+          window.unlinkSync.unlinkSync(file);
+        });
+        doneFunc();
+      })
       .catch((err) => wrongPassword());
   }
 }
