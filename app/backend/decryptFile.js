@@ -13,19 +13,18 @@ async function decryptFile(encFileLocation, password) {
   });
 
   const filePath = path.parse(encFileLocation).dir;
+  const fileExt = path.parse(encFileLocation).ext;
   let fileName = path.parse(encFileLocation).name;
 
-  let newDecFile;
-  if (fileName.includes("_")) {
-    fileName = fileName.split("_").slice(0, -1).join("_");
-    const fileExt = path.parse(encFileLocation).ext;
-    newDecFile = filePath + "\\" + fileName + "_DEC" + fileExt;
+  if (fileName.includes("__ENC")) {
+    fileName = fileName.split("__ENC").slice(0, -1).join("__ENC");
   } else {
-    const fileExt = path.parse(encFileLocation).ext;
-    newDecFile = filePath + "\\" + fileName + "_DEC" + fileExt;
+    fileName = fileName + "__DEC";
   }
 
+  const newDecFile = filePath + "\\" + fileName + fileExt;
   const fileWriteStream = fs.createWriteStream(newDecFile);
+
   try {
     await pipeline(
       fileReadStream,

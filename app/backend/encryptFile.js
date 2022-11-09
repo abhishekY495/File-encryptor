@@ -14,7 +14,7 @@ async function encryptFile(fileLocation, password) {
   const filePath = path.parse(fileLocation).dir;
   const fileName = path.parse(fileLocation).name;
   const fileExt = path.parse(fileLocation).ext;
-  const newEncFile = filePath + "\\" + fileName + "_ENC" + fileExt;
+  const newEncFile = filePath + "\\" + fileName + "__ENC" + fileExt;
   const fileWriteStream = fs.createWriteStream(newEncFile);
 
   await pipeline(
