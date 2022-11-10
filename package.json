@@ -1,7 +1,7 @@
 {
   "name": "file-encryptor",
   "productName": "File Encryptor",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "An app to encrypt/decrypt files with a password.",
   "main": "./app/electron/main.js",
   "scripts": {
