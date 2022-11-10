@@ -1,6 +1,6 @@
 # File Encryptor 🔐
 An app that Encrypts / Decrypts your files with a password. Built using <a href="https://www.electronjs.org/">Electron</a> and <a href="https://tailwindcss.com/">TailwindCSS</a><br>
-Download the app from <a href="https://github.com/abhishake21/File-encryptor/releases/download/v1.0.1/File.Encryptor.Setup.1.0.1.exe">here</a> and install like any other program.
+Download the app from <a href="https://github.com/abhishake21/File-encryptor/releases/download/v1.0.1/File.Encryptor.Setup.1.0.1.exe">here</a> or from the Releases tab for the latest version and install like any other program.
 
 ## Usage 🚀
 https://user-images.githubusercontent.com/67749693/201058289-bb4457a9-05ef-4afd-9601-725d57c184c7.mp4
