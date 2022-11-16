@@ -5,6 +5,10 @@ const { menuTemplate } = require("./menuTemplate.js");
 const isMac = process.platform === "darwin";
 const isDev = false;
 
+if(process.platform === "win32") {
+  app.setAppUserModelId(app.name);
+}
+
 function createMainWindow() {
   const mainWindow = new BrowserWindow({
     title: "File encryptor",
