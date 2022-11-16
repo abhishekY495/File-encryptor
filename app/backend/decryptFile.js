@@ -4,6 +4,8 @@ const { pipeline } = require("stream/promises");
 const { Transform } = require("stream");
 const { app } = require("./encryption.js");
 const { encHighWaterMark } = require("./encryptFile.js");
+const { railfence } = require("./railfenceCipher.js");
+const { scramble } = require("../electron/menuTemplate.js");
 
 const decHighWatermark = encHighWaterMark + 32;
 
@@ -16,7 +18,9 @@ async function decryptFile(encFileLocation, password) {
   const fileExt = path.parse(encFileLocation).ext;
   let fileName = path.parse(encFileLocation).name;
 
-  if (fileName.includes("__ENC")) {
+  if(scramble) {
+    fileName = railfence.decipher(fileName);
+  } else if (fileName.includes("__ENC")) {
     fileName = fileName.split("__ENC").slice(0, -1).join("__ENC");
   } else {
     fileName = fileName + "__DEC";

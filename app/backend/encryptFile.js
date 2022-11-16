@@ -3,6 +3,8 @@ const fs = require("fs");
 const { pipeline } = require("stream/promises");
 const { Transform } = require("stream");
 const { app } = require("./encryption.js");
+const { railfence } = require("./railfenceCipher.js");
+const { scramble } = require("../electron/menuTemplate.js");
 
 const encHighWaterMark = 1024 * 1024 * 100;
 
@@ -12,9 +14,17 @@ async function encryptFile(fileLocation, password) {
   });
 
   const filePath = path.parse(fileLocation).dir;
-  const fileName = path.parse(fileLocation).name;
   const fileExt = path.parse(fileLocation).ext;
-  const newEncFile = filePath + "\\" + fileName + "__ENC" + fileExt;
+  let fileName = path.parse(fileLocation).name;
+  let newEncFile;
+  
+  if (scramble) {
+    fileName = railfence.cipher(fileName);
+    newEncFile = filePath + "\\" + fileName + fileExt;
+  } else {
+    newEncFile = filePath + "\\" + fileName + "__ENC" + fileExt;
+  }
+
   const fileWriteStream = fs.createWriteStream(newEncFile);
 
   await pipeline(
