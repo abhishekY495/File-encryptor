@@ -2,6 +2,7 @@ const messageBox = document.querySelector("#message-box");
 const progressBarContainer = document.querySelector("#progress-bar-container");
 const progressBar = document.querySelector("#progress-bar");
 const resetBtn = document.querySelector("#reset-btn");
+import { filesList } from "../browseFile.js";
 
 export function wrongPassword() {
   progressBar.classList.remove("bg-[limegreen]");
@@ -25,4 +26,10 @@ export function wrongPassword() {
   //
   resetBtn.disabled = false;
   resetBtn.classList.remove("opacity-10");
+
+  if (filesList.length > 1) {
+    window.sendNotification("Error", "Wrong Password/Files selected");
+  } else {
+    window.sendNotification("Error", "Wrong Password/File selected");
+  }
 }
