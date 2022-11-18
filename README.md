@@ -15,8 +15,11 @@ https://user-images.githubusercontent.com/67749693/201058289-bb4457a9-05ef-4afd-
 - The app is **Open source** so you can check the code, customize and build yourself.
 
 ## Future Features 🔮
-- [ ] Notification after task completion or error.
-- [ ] File name Encryption.
-<br>
+- [x] Notification after task completion or error.
+- [x] File name Encryption.
+
+Above features are **OFF** by deafult.<br>
+To enable, click **Help** on the TaskBar and select the feature you want to use and then click **Reload**.
+<br><br>
 
 > Icons and Logo provided by - [Icons8](https://icons8.com)
