@@ -1,6 +1,11 @@
 const path = require("path");
 const { app, BrowserWindow, Menu } = require("electron");
-const { menuTemplate } = require("./menuTemplate.js");
+const { createAboutWindow } = require("./about.js");
+const { desktopNotificationSettings, saveDesktopNotificationSettings } = require("./notificationSettings.js");
+const { scrambleFileNameSettings, saveScrambleFileNameSetting } = require("./scrambleFileName.js");
+
+let notification = desktopNotificationSettings();
+let scramble = scrambleFileNameSettings();
 
 const isMac = process.platform === "darwin";
 const isDev = false;
@@ -9,8 +14,9 @@ if(process.platform === "win32") {
   app.setAppUserModelId(app.name);
 }
 
+let mainWindow;
 function createMainWindow() {
-  const mainWindow = new BrowserWindow({
+  mainWindow = new BrowserWindow({
     title: "File encryptor",
     width: 420,
     height: 690,
@@ -30,6 +36,45 @@ function createMainWindow() {
 
   mainWindow.loadFile(path.join(__dirname, "../src/index.html"));
 }
+
+const menuTemplate = [
+  {
+    label: "Help",
+    submenu: [
+      {
+        label: "About",
+        click: createAboutWindow,
+      },
+      {
+        label: "Project code - Github",
+        click: () => shell.openExternal("https://github.com/abhishake21/File-encryptor"),
+      },
+      {
+        label: "Desktop Notifications",
+        type: "checkbox",
+        checked: notification,
+        click: () => {
+          saveDesktopNotificationSettings((notification = !notification));
+          mainWindow.reload();
+        },
+      },
+      {
+        label: "Un/Scramble File names",
+        type: "checkbox",
+        checked: scramble,
+        click: () => {
+          saveScrambleFileNameSetting((scramble = !scramble));
+          mainWindow.reload();
+        },
+      },
+      {
+        label: "Quit",
+        click: () => app.quit(),
+        accelerator: `CmdOrCtrl+W`,
+      },
+    ],
+  }
+];
 
 app.whenReady().then(() => {
   createMainWindow();
