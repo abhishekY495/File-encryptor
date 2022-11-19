@@ -17,8 +17,8 @@
       "icon": "./assets/icons/app-icon.ico"
     },
     "nsis": {
-      "installerIcon": "./assets/icons/installer-icon.ico",
-      "uninstallerIcon": "./assets/icons/uninstaller-icon.ico",
+      "installerIcon": "./assets/icons/app-icon.ico",
+      "uninstallerIcon": "./assets/icons/app-icon.ico",
       "uninstallDisplayName": "File Encryptor",
       "oneClick": false,
       "allowToChangeInstallationDirectory": true
