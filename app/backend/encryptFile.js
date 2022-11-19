@@ -4,7 +4,7 @@ const { pipeline } = require("stream/promises");
 const { Transform } = require("stream");
 const { app } = require("./encryption.js");
 const { railfence } = require("./railfenceCipher.js");
-const { scramble } = require("../electron/menuTemplate.js");
+const { scramble } = require("../electron/settings.js");
 
 const encHighWaterMark = 1024 * 1024 * 100;
 

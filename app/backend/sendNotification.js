@@ -1,4 +1,4 @@
-const { notification } = require("../electron/menuTemplate.js");
+const { notification } = require("../electron/settings.js");
 
 function sendNotification(title, message) {
   if (notification) {

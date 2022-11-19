@@ -5,7 +5,7 @@ const { Transform } = require("stream");
 const { app } = require("./encryption.js");
 const { encHighWaterMark } = require("./encryptFile.js");
 const { railfence } = require("./railfenceCipher.js");
-const { scramble } = require("../electron/menuTemplate.js");
+const { scramble } = require("../electron/settings.js");
 
 const decHighWatermark = encHighWaterMark + 32;
 
