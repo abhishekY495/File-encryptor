@@ -10,6 +10,7 @@ const clearAllBtn = document.querySelector("#clear-btn");
 const encryptBtn = document.querySelector("#encrypt-btn");
 const decryptBtn = document.querySelector("#decrypt-btn");
 const resetBtn = document.querySelector("#reset-btn");
+const checkPasswordBtn = document.querySelector("#check-password-btn");
 // Password
 const passwordInput = document.querySelector("#password-input");
 // Progress
@@ -28,6 +29,7 @@ function reset() {
   decryptBtn.disabled = false;
   decryptBtn.disabled = false;
   passwordInput.disabled = false;
+  checkPasswordBtn.disabled = false;
   clearAllBtn.disabled = true;
   //
   fileBrowseContainer.classList.remove("opacity-40");

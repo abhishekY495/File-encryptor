@@ -9,6 +9,7 @@ const folderSelectBtn = document.querySelector("#folder-picker");
 const clearAllBtn = document.querySelector("#clear-btn");
 const encryptBtn = document.querySelector("#encrypt-btn");
 const decryptBtn = document.querySelector("#decrypt-btn");
+const checkPasswordBtn = document.querySelector("#check-password-btn");
 // Password
 const passwordInput = document.querySelector("#password-input");
 
@@ -19,6 +20,7 @@ export function disableUI() {
   encryptBtn.disabled = true;
   decryptBtn.disabled = true;
   passwordInput.disabled = true;
+  checkPasswordBtn.disabled = true;
   //
   clearAllBtn.classList.add("opacity-10");
   fileBrowseContainer.classList.add("opacity-40");
