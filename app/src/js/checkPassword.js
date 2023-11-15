@@ -18,7 +18,6 @@ checkPasswordBtn.addEventListener("click", async () => {
     try {
       const respone = await fetch(API_URL);
       const data = await respone.json();
-      console.log(data);
       const raw_data = data?.result?.raw_data;
       const hashesFound = Object.keys(raw_data);
       const ifHashFound = hashesFound.some((hash) => hash === sha256Hash);
