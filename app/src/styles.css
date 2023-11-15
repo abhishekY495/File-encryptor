@@ -551,6 +551,10 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
+.fixed {
+  position: fixed;
+}
+
 .sticky {
   position: -webkit-sticky;
   position: sticky;
@@ -562,6 +566,10 @@ video {
 
 .left-0 {
   left: 0px;
+}
+
+.bottom-\[70px\] {
+  bottom: 70px;
 }
 
 .m-auto {
@@ -604,6 +612,14 @@ video {
   display: none;
 }
 
+.h-\[30px\] {
+  height: 30px;
+}
+
+.h-\[33px\] {
+  height: 33px;
+}
+
 .h-8 {
   height: 2rem;
 }
@@ -614,10 +630,6 @@ video {
 
 .h-\[35px\] {
   height: 35px;
-}
-
-.h-\[33px\] {
-  height: 33px;
 }
 
 .h-3 {
@@ -636,8 +648,12 @@ video {
   width: 100%;
 }
 
-.w-16 {
-  width: 4rem;
+.w-\[45px\] {
+  width: 45px;
+}
+
+.w-\[75px\] {
+  width: 75px;
 }
 
 .w-auto {
@@ -652,6 +668,27 @@ video {
 
 .w-\[290px\] {
   width: 290px;
+}
+
+.w-\[400px\] {
+  width: 400px;
+}
+
+@-webkit-keyframes pulse {
+  50% {
+    opacity: .5;
+  }
+}
+
+@keyframes pulse {
+  50% {
+    opacity: .5;
+  }
+}
+
+.animate-pulse {
+  -webkit-animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+          animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
 
 .select-none {
@@ -824,6 +861,14 @@ video {
   background-color: rgb(212 212 212 / var(--tw-bg-opacity));
 }
 
+.bg-\[url\(\'\.\.\/\.\.\/assets\/password-check\.png\'\)\] {
+  background-image: url('../../assets/password-check.png');
+}
+
+.bg-cover {
+  background-size: cover;
+}
+
 .p-3 {
   padding: 0.75rem;
 }
@@ -932,6 +977,10 @@ video {
 
 .opacity-80 {
   opacity: 0.8;
+}
+
+.opacity-50 {
+  opacity: 0.5;
 }
 
 .transition-all {
@@ -1218,6 +1267,10 @@ video {
   cursor: pointer;
 }
 
+.hover\:cursor-not-allowed:hover {
+  cursor: not-allowed;
+}
+
 .hover\:bg-neutral-300:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(212 212 212 / var(--tw-bg-opacity));
@@ -1246,6 +1299,10 @@ video {
 .hover\:bg-neutral-800:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(38 38 38 / var(--tw-bg-opacity));
+}
+
+.hover\:opacity-90:hover {
+  opacity: 0.9;
 }
 
 .focus\:border-2:focus {
